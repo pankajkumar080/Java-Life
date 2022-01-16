@@ -1,0 +1,24 @@
+package com.ftura.pankaj.kumar;
+
+import java.util.Scanner;
+
+public class MegaBytes {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the Value in kiloBytes");
+        int kiloBytes = sc.nextInt();
+        printMegaBytes(kiloBytes);
+    }
+
+    public static void printMegaBytes(int kiloBytes) {
+        int megabytes, kiloRemainder;
+        if (kiloBytes < 0) {
+            System.out.println("Invalid Value");
+        } else {
+            megabytes = (kiloBytes / 1024);
+            kiloRemainder = kiloBytes % 1024;
+            System.out.println(kiloBytes + " KB = " + megabytes + " MB and " + kiloRemainder + " KB");
+
+        }
+    }
+}
